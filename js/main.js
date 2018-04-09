@@ -16,35 +16,36 @@ function whereIsJules(today) {
         }
 
         if (today > start && today < end) {
-            console.log('Jules is in iraque')
-            console.log('he will be back in holland at ' + end)
+            console.log('Jules is in Iraq')
+            console.log('He will be back in the Netherlands at ' + end)
+
             setCountDown(end, 'Jules is terug over')
 
-            let imageUrl= './img/gasflare.gif';
+            let imageUrl = './img/gasflare.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
-            $("#favicon").attr("href","./img/iraq-flag.png");
-            $("#flag").attr("src","./img/iraq-flag.png");
+
+            $("#favicon").attr("href", "./img/iraq-flag.png");
+            $("#flag").attr("src", "./img/iraq-flag.png");
 
 
         } else if (nextStart && today > end && today < nextStart) {
-            console.log('Jules is in the netherlands')
+            console.log('Jules is in the Netherlands')
+            console.log('He will be in the Netherlands until ' + nextStart)
 
             setCountDown(nextStart, 'Jules is hier nog')
 
-            let imageUrl= './img/dutch.gif';
+            let imageUrl = './img/dutch.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
 
-            $("#favicon").attr("href","./img/nl-flag.png");
-            $("#flag").attr("src","./img/nl-flag.png");
+            $("#favicon").attr("href", "./img/nl-flag.png");
+            $("#flag").attr("src", "./img/nl-flag.png");
 
-            
         }
     })
 
 }
 
 function setCountDown(date, prefixString) {
-    console.log('setCountDown', date, prefixString)
     $("#countdown")
         .countdown(date, function (event) {
             $(this).text(
@@ -54,5 +55,5 @@ function setCountDown(date, prefixString) {
 }
 
 
-whereIsJules(new Date())
+whereIsJules(new Date());
 // whereIsJules(new Date('2018/04/26'));
