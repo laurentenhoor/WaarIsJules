@@ -22,6 +22,8 @@ function whereIsJules(today) {
 
             let imageUrl= './img/gasflare.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
+            $("#favicon").attr("href","./img/iraq-flag.png");
+            $("#flag").attr("src","./img/iraq-flag.png");
 
 
         } else if (nextStart && today > end && today < nextStart) {
@@ -31,6 +33,10 @@ function whereIsJules(today) {
 
             let imageUrl= './img/dutch.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
+
+            $("#favicon").attr("href","./img/nl-flag.png");
+            $("#flag").attr("src","./img/nl-flag.png");
+
             
         }
     })
