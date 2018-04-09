@@ -20,14 +20,14 @@ function whereIsJules(today) {
             console.log('he will be back in holland at ' + end)
             setCountDown(end, 'Jules is terug over')
 
-            let imageUrl= './img/dance2.gif';
+            let imageUrl= './img/gasflare.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
 
 
         } else if (nextStart && today > end && today < nextStart) {
             console.log('Jules is in the netherlands')
-            setCountDown(nextStart, 'Jules is hier nog')
 
+            setCountDown(nextStart, 'Jules is hier nog')
 
             let imageUrl= './img/dutch.gif';
             $('body').css('background-image', 'url(' + imageUrl + ')');
@@ -38,7 +38,7 @@ function whereIsJules(today) {
 }
 
 function setCountDown(date, prefixString) {
-    console.log('setCountDown', date)
+    console.log('setCountDown', date, prefixString)
     $("#countdown")
         .countdown(date, function (event) {
             $(this).text(
@@ -47,5 +47,6 @@ function setCountDown(date, prefixString) {
         });
 }
 
-// whereIsJules(new Date('2018/04/26'));
+
 whereIsJules(new Date())
+// whereIsJules(new Date('2018/04/26'));
